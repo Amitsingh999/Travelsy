@@ -1,0 +1,75 @@
+.custom-input-group {
+    // width: 30vw !important;
+    padding-right: 200px;
+}
+
+.footer {
+    padding-top: 146px;
+}
+
+.social-icon {
+    width: 37px;
+    height: 37px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.footer-link {
+    color: $body-color;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-link:hover {
+    color: $primary;
+    text-decoration: underline;
+}
+
+.icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $primary;
+    /* Bootstrap primary blue */
+    color: #ffffff;
+    /* White icon */
+    font-size: 0.825rem;
+}
+
+.fs-48 {
+    font-size: 3rem;
+}
+
+.quick-link {
+    padding-left: 50px;
+    column-gap: 65px;
+}
+
+.gap-12 {
+    gap: 12px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+@media (max-width: 1200px) {
+    .custom-input-group {
+        padding-right: 50px;
+    }
+}
+
+@media(max-width: 992px) {
+    .quick-link {
+        padding-left: 12px;
+    }
+    .custom-input-group {
+        padding-right: 0px;
+    }
+}
