@@ -1,0 +1,198 @@
+.banner {
+    background-image: url(../images/banner-map.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-left {
+    margin-top: 150px;
+}
+
+.banner-images {
+    position: relative;
+    min-height: 500px;
+
+}
+
+
+.banner-one {
+    position: absolute;
+    top: 13%;
+    left: 6%;
+    width: 45%;
+}
+
+.banner-three {
+    position: absolute;
+    top: 150px;
+    right: 0;
+    width: 45%;
+}
+
+.banner-two {
+    position: absolute;
+    bottom: -17%;
+    left: 6%;
+    width: 46%;
+}
+
+.join-now-circle {
+    position: absolute;
+    top: 108%;
+    left: 0%;
+    transform: translate(108%, -165%);
+}
+
+@media (min-width: 1400px) {
+    .banner-two {
+        position: absolute;
+        bottom: -15%;
+        left: 3%;
+        width: 46%;
+    }
+}
+
+
+@media (max-width: 1199.98px) {
+    .banner-left {
+        margin-top: 0px;
+    }
+
+    .banner-one {
+        position: absolute;
+        top: 3%;
+        left: 12%;
+        width: 35%;
+    }
+
+    .banner-three {
+        position: absolute;
+        top: 20%;
+        right: 13%;
+        width: 35%;
+    }
+
+    .banner-two {
+        position: absolute;
+        bottom: -50%;
+        left: 12%;
+        width: 35%;
+    }
+
+    .join-now-circle {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform: translate(143%, -75%);
+        width: 25%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .banner-one {
+        position: absolute;
+        top: 3%;
+        left: 14%;
+        width: 35%;
+    }
+
+    .banner-three {
+        position: absolute;
+        top: 20%;
+        right: 11%;
+        width: 35%;
+    }
+
+    .banner-two {
+        position: absolute;
+        bottom: -15%;
+        left: 14%;
+        width: 35%;
+    }
+
+    .join-now-circle {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform: translate(155%, -145%);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .banner-one {
+        position: absolute;
+        top: 2%;
+        left: 12%;
+        width: 35%;
+    }
+
+    .banner-three {
+        position: absolute;
+        top: 15%;
+        right: 13%;
+        width: 35%;
+    }
+
+    .banner-two {
+        position: absolute;
+        bottom: 14%;
+        left: 12%;
+        width: 35%;
+    }
+
+    .join-now-circle {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform: translate(147%, -240%);
+        width: 25%;
+    }
+}
+
+@media(max-width: 575.98px) {
+    .join-now-circle {
+        display: none;
+    }
+
+    .banner-two {
+        position: absolute;
+        bottom: 33%;
+        left: 12%;
+        width: 35%;
+
+    }
+
+    .banner-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .banner-one,
+    .banner-two,
+    .banner-three {
+        position: relative !important;
+        width: 100% !important;
+        margin: 10px 0;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+    }
+}
+
+
+
+// TODO: Temporary padding fix — remove after final banner layout
+
+.mt-200 {
+    margin-top: 200px;
+}
+
+@media(max-width: 1200px) {
+    .mt-200 {
+        margin-top: 300px;
+    }
+}
