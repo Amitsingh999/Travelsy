@@ -33,7 +33,7 @@
   bottom: -12px;
   width: 10px;
   height: 10px;
-  background-color: $primary; /* blue */
+  background-color: $primary;
   border-radius: 50%;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -46,7 +46,6 @@
 .nav-link:hover::after {
   opacity: 1;
 }
-
 
 
 .topbar-stack-center {

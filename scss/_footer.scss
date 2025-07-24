@@ -1,7 +1,18 @@
-.custom-input-group {
-    // width: 30vw !important;
-    padding-right: 200px;
+.subscription-form .form-field {
+    width: 381px;
+    max-width: 100%;
 }
+
+.subscribe-form-content {
+    margin-right: 165px;
+    line-height: 46px;
+}
+
+.form-field::placeholder {
+    color: $primary;
+    opacity: 1;
+}
+
 
 .footer {
     padding-top: 146px;
@@ -36,11 +47,10 @@
     height: 30px;
     border-radius: 50%;
     background-color: $primary;
-    /* Bootstrap primary blue */
     color: #ffffff;
-    /* White icon */
     font-size: 0.825rem;
 }
+
 
 .fs-48 {
     font-size: 3rem;
@@ -59,9 +69,25 @@
     font-size: 14px;
 }
 
+.footer-top {
+    margin-bottom: -86px;
+}
+
+.bg-gradient-soft-blue {
+    background: linear-gradient(180deg, rgba(70, 145, 242, 0.1) 0%, rgba(70, 145, 242, 0) 100%);
+}
+
+
+
+
 @media (max-width: 1200px) {
-    .custom-input-group {
-        padding-right: 50px;
+    .subscribe-form-content {
+        margin-right: 100px;
+    }
+
+    .subscription-form .form-field {
+        width: 300px;
+        max-width: 100%;
     }
 }
 
@@ -69,7 +95,30 @@
     .quick-link {
         padding-left: 12px;
     }
-    .custom-input-group {
-        padding-right: 0px;
+
+    .subscribe-form-content {
+        margin-right: 0px;
     }
+
+    .footer {
+        padding-top: 120px;
+    }
+
+    .subscription-form .form-field {
+        width: 200px;
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 575px) {
+    .subscribe-form-content {
+        font-size: 1.4rem !important;
+        line-height: 2rem !important;
+
+    }
+
+    .footer {
+        padding-top: 110px;
+    }
+
 }

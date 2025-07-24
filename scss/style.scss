@@ -8,11 +8,14 @@ $headings-color: #1A1313;
 $font-family-base: "Mulish", sans-serif;
 $headings-font-family: "Space Grotesk", serif;
 $sub-heading-font-family: 'Bunny', sans-serif;
-$booking-font-family: 'Poppins', sans-serif;
+$booking-font-family: 'Lexend', sans-serif;
 $headings-line-height:        1.2;
 $line-height-base:            1.5;
 
 $font-weight-extrabold: 800;
+
+$shadow-color: rgba(0, 0, 0, 0.06);
+
 
 
 @font-face {
@@ -38,7 +41,6 @@ $spacers: (
   100: $spacer * 10
  
 );
-
 
 
 $custom-container-max-widths: (
@@ -74,6 +76,7 @@ $container-max-widths: map-merge($map1: $container-max-widths, $map2: $custom-co
 
 .booking-form {
   font-family: $booking-font-family;
+  color: #171717;
 }
 
 .heading {
@@ -93,15 +96,38 @@ $container-max-widths: map-merge($map1: $container-max-widths, $map2: $custom-co
   color: $headings-color;
 }
 
-.placeholder {
-  color: #46733e;
-
-}
-
 .text-body-color{
   color: $body-color;
+}
+
+.shadow-soft {
+  box-shadow: 0 0 30px 0 $shadow-color;
+}
+
+.bg-gradient-primary-vertical {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20vh;
+    left: -25%;
+    aspect-ratio: 203 / 811;
+    width: clamp(100px, 20vw, 203px);
+    height: auto;
+    background: linear-gradient(180deg, #4691F2 0%, rgba(70, 145, 242, 0) 100%);
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    z-index: -1;
+  }
 }
 
 
 @import './header';
 @import './footer';
+@import './banner';
+@import './venue-booking-form';
+@import './about';
+@import './booking-cta';
+@import './stats';
+@import './testimonials';
