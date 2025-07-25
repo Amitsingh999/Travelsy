@@ -110,6 +110,18 @@
     }
 }
 
+@media (max-width: 767.98px) {
+  .subscription-form .custom {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .subscription-form .form-field,
+  .subscription-form button {
+    width: 100%;
+  }
+}
+
 @media(max-width: 575px) {
     .subscribe-form-content {
         font-size: 1.4rem !important;

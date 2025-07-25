@@ -122,12 +122,13 @@
                         <p class="sub-heading heading-color fs-4 fw-regular">Relax & Enjoy the Vacation</p>
                         <h1 class="fw-bold mb-4">Choose <span class="text-primary">Travelsy</span> To Book Your Hotel
                         </h1>
-                        <p class="fw-semibold mb-lg-8 mb-6">Lorem ipsum dolor sit amet consectetur. Hac consequat hac arcu sed.
+                        <p class="fw-semibold mb-lg-8 mb-6">Lorem ipsum dolor sit amet consectetur. Hac consequat hac
+                            arcu sed.
                             Lectus ante ut in mattis
                             ornare commodo nisi. Tortor tincidunt fames quam fusce convallis eget pulvinar.</p>
                         <a href="#" class="btn btn-primary mb-6 rounded-pill extrabold text-white"
-                            aria-label="Make a hotel reservation">Make Reservation<i
-                                class="bi bi-calendar-fill ms-2" aria-hidden="true"></i></a>
+                            aria-label="Make a hotel reservation">Make Reservation<i class="bi bi-calendar-fill ms-2"
+                                aria-hidden="true"></i></a>
                     </div>
 
                     <div class="col-xl-6 col-12 position-relative banner-images">
@@ -145,11 +146,36 @@
         </section>
 
 
+        <section class="venue-booking-form">
+            <div class="container">
+                <div class="p-6 rounded-5 shadow-sm">
+                    <form class="d-flex justify-content-center flex-wrap flex-lg-nowrap gap-5">
+                        <select class="form-select form-field rounded-pill border-primary-30 booking-form">
+                            <option selected disabled>Type of Venue*</option>
+                            <option>Banquet Hall</option>
+                            <option>Outdoor Garden</option>
+                            <option>Conference Center</option>
+                        </select>
+
+                        <input id="customDate"
+                            class="form-control form-field rounded-pill border-primary-30 booking-form"
+                            placeholder="Pick A Date*">
+
+                        <input type="text" class="form-control form-field rounded-pill border-primary-30 booking-form"
+                            placeholder="ZIP Code*">
+
+                        <a href="#" class="btn btn-primary extrabold text-white rounded-pill search-btn">Search
+                            <span class=""><i class="bi bi-arrow-right"></i></span></a>
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </main>
 
 
     <footer>
-        <div class="footer-top mt-200">
+        <div class="footer-top">
             <div class="container ">
                 <div class="row rounded-3 bg-primary px-lg-8 px-4 py-lg-6 py-4">
                     <div class="col-md-6 col-12">
@@ -319,7 +345,7 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script type="module" src="./js/script.js"></script>
-    
+
 </body>
 
 </html>
