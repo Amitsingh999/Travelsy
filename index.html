@@ -214,7 +214,7 @@
                     </div>
 
                     <div class="col-lg-6 order-1 order-lg-2 text-lg-start text-center">
-                        <p class="text-primary sub-heading fw-semibold mb-2">Get About Us</p>
+                        <p class="text-primary sub-heading fs-4 fw-semibold mb-2">Get About Us</p>
                         <h2 class="fw-bold mb-3">More About Travelsy</h2>
                         <p class="fw-semibold">Amet cursus sit amet dictum. At erat pellentesque adipiscing commodo.
                             Sit amet volutpat consequat mauris nunc congue nisi vitae suscipit. In arcu cursus
@@ -245,10 +245,10 @@
             </div>
         </section>
 
-        <section class="destinations my-lg-100 my-50">
+        <section class="destinations mt-lg-0 mt-8 mb-50 ">
             <div class="container">
                 <div class="row">
-                    <p class="text-center text-primary sub-heading fw-semibold">Top Destinations</p>
+                    <p class="text-center text-primary fs-4 sub-heading fw-semibold">Top Destinations</p>
                     <h2 class="text-center fw-bold mb-lg-50 mb-8">Popular Hotels For Booking</h2>
                     <div class="swiper mySwiper2">
                         <div class="swiper-wrapper pb-100">
@@ -484,7 +484,7 @@
         </section>
 
 
-        <section class="stats py-50 pb-lg-100 pb-50">
+        <section class="stats py-50 pb-lg-100 pb-50 line-vector-2 overflow-x-hidden">
             <div class="container">
                 <div class="row g-4">
 
@@ -628,7 +628,7 @@
         </section>
 
 
-        <section class="testimonials py-50">
+        <section class="testimonials pt-50 pb-lg-100 pb-50 vector-top-left line-vector overflow-x-hidden">
             <div class="container">
                 <p class="text-primary text-center fw-semibold fs-4 sub-heading">Testimonials</p>
                 <h2 class="fw-bold text-center text-black mb-lg-50 mb-8">What Our Traveler Say’s</h2>
@@ -663,10 +663,9 @@
             </div>
         </section>
 
-
         <section class="booking-cta">
             <div class="container text-center">
-                <h2 class="m-2 fw-bold text-white">Are You Ready To Travel? Remember Us !!</h2>
+                <h2 class="fw-bold text-white">Are You Ready To <span class="d-block">Travel? Remember Us !!</span></h2>
                 <p class="mb-8 fw-semibold text-white">Amet nisl purus in mollis nunc. Blandit libero volutpat sed cras
                     ornare. In pellentesque massa
                     placerat duis ultricies lacus sed. Nisl suscipit adipiscing bibendum est ultricies integer quis
@@ -678,9 +677,9 @@
         </section>
 
 
-        <section class="blogs">
-            <div class="container my-lg-100 my-50">
-                <p class="text-center text-primary sub-heading fw-semibold">Latest News</p>
+        <section class="blogs line-vector vector-bottom-right overflow-x-hidden">
+            <div class="container mt-lg-70 mt-8 mb-lg-100 mb-50">
+                <p class="text-center fs-4 text-primary sub-heading fw-semibold">Latest News</p>
                 <h2 class="text-center mb-lg-50 mb-8">Read Latest Blogs</h2>
                 <div class="row g-4">
 
@@ -733,27 +732,29 @@
     </main>
 
     <footer>
+
         <div class="footer-top">
-            <div class="container ">
+            <div class="container">
                 <div class="row rounded-3 bg-primary px-lg-8 px-4 py-lg-6 py-4">
                     <div class="col-md-6 col-12">
-                        <p
-                            class="text-white subscribe-form-content fs-3 text-center text-md-start fw-medium heading-font">
-                            Subscribe for Latest
-                            Newsletter</p>
+                        <p class="text-white fs-3 text-center text-md-start fw-medium heading-font">
+                            Subscribe for Latest Newsletter
+                        </p>
                     </div>
                     <div class="col-md-6 col-12 d-flex justify-content-center align-items-center">
-                        <form class="subscription-form m-0 mb-3 needs-validation" novalidate>
-                            <div class="custom d-flex gap-4">
-                                <input type="email" class="form-control form-field py-2 fw-semibold rounded-pill"
-                                    placeholder="Enter your email" aria-label="Email" required>
-                                <button class="btn btn-primary text-primary extrabold bg-white rounded-pill py-2 px-5"
-                                    type="submit">Subscribe</button>
-                            </div>
-                            <div class="invalid-feedback">
-                                Please enter a valid email address.
-                            </div>
+                        <form class="subscription-form m-0 mb-3 needs-validation w-100" novalidate>
+                            <div class="custom d-flex gap-3 flex-column flex-md-row w-100">
+                                <div class="flex-grow-1">
+                                    <input type="email" class="form-control form-field py-2 fw-semibold rounded-pill"
+                                        placeholder="Enter your email" required />
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
 
+                                <button class="btn btn-primary text-primary extrabold bg-white rounded-pill py-2 px-5"
+                                    type="submit">
+                                    Subscribe
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -905,6 +906,23 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script type="module" src="./js/script.js"></script>
+    <script>
+        
+        (() => {
+            'use strict';
+            const forms = document.querySelectorAll('.needs-validation');
+            Array.from(forms).forEach((form) => {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                });
+            });
+        })();
+    </script>
+
 
     <script>
         var swiper1 = new Swiper(".mySwiper", {

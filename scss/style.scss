@@ -31,6 +31,7 @@ $spacers: (
   7: $spacer * 3.5,
   8: $spacer * 4,
   50: $spacer * 5,
+  70: $spacer *7,
   100: $spacer * 10
  
 );
@@ -99,6 +100,10 @@ $container-max-widths: map-merge($map1: $container-max-widths, $map2: $custom-co
 
 .text-black{
   color: $black;
+}
+
+.fs-30{
+  font-size: 30px !important;
 }
 
 

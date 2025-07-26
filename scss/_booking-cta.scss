@@ -1,51 +1,15 @@
 .booking-cta {
-    background-image: url(../images/book-now-section-1.webp);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    padding-block: 106px;
-    padding-inline: 401px;
+  background-image: url('../images/book-now-section-1.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  position: relative;
+  padding: 100px 15px;
 }
 
-@media(max-width: 1200px) {
-    .booking-cta {
-        padding-block: 70px;
-        padding-inline: 150px;
-    }
-}
-
-@media(max-width: 992px) {
-    .booking-cta {
-        padding-block: 70px;
-        padding-inline: 80px;
-    }
-
-    .booking-cta h2 {
-        font-size: 30px;
-        margin-inline: 80px !important;
-    }
-
-    .booking-cta p {
-        font-size: 14px;
-    }
-}
-
-@media(max-width: 768px) {
-    .booking-cta {
-        background-size: cover;
-    }
-    .booking-cta h2 {
-        margin-inline: 40px !important;
-    }
-}
-
-@media(max-width: 575px) {
-    .booking-cta {
-        padding-block: 40px;
-        padding-inline: 20px;
-    }
-    .booking-cta h2 {
-        margin-inline: 0px !important;
-        font-size: 1.5rem;
-    }
+.booking-cta .container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
 }

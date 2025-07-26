@@ -1,4 +1,23 @@
-.stats-image{
-    width: 80px; 
+.stats-image {
+    width: 80px;
     height: 80px;
+}
+
+.line-vector-2 {
+    position: relative;
+    overflow: visible;
+
+}
+
+.line-vector-2::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: auto;
+    right: -9px;
+    width: 134px;
+    height: 300px;
+    background: linear-gradient(180deg, #4691F2 0%, rgba(70, 145, 242, 0) 100%);
+    transform: rotate(49deg);
+    z-index: -1;
 }

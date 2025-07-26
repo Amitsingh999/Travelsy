@@ -134,3 +134,17 @@
     }
 
 }
+
+.subscription-form .form-control,
+.subscription-form .btn {
+  height: 44px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: none !important;
+  box-shadow: none !important;
+}
+.subscription-form .form-control:focus,
+.subscription-form .btn:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
