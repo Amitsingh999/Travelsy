@@ -1,0 +1,28 @@
+
+// .card-wraper {
+//   width: 100%;
+//   max-width: 350px;
+//   margin: 0 auto;
+// }
+
+// .destinations .swiper-slide {
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: row;
+// }
+
+// .destinations .card {
+//   width: 100%;
+//   max-width: 350px;
+// }
+
+
+.swiper-nav-wraper-2 {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);                       
+  gap: 10px;
+  padding: 24px 53px;
+  z-index: 10;
+}

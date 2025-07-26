@@ -1,13 +1,14 @@
 $primary: #4691F2;
 $secondary: #1E1E1E;
 $body-color: #6C6C6C;
+$black: #000;
 
 $headings-color: #1A1313;
 
 
 $font-family-base: "Mulish", sans-serif;
 $headings-font-family: "Space Grotesk", serif;
-$sub-heading-font-family: 'Bunny', sans-serif;
+$sub-heading-font-family: 'Corinthia', sans-serif;
 $booking-font-family: 'Lexend', sans-serif;
 $headings-line-height:        1.2;
 $line-height-base:            1.5;
@@ -15,14 +16,6 @@ $line-height-base:            1.5;
 $font-weight-extrabold: 800;
 
 $shadow-color: rgba(0, 0, 0, 0.06);
-
-
-
-@font-face {
-  font-family: "Bunny";
-  src: url("../fonts/Bunny.otf") format("truetype");
-}
-
 
 $heading-gradient: linear-gradient(to right, $primary 50%, #333 50%);
 
@@ -104,23 +97,10 @@ $container-max-widths: map-merge($map1: $container-max-widths, $map2: $custom-co
   box-shadow: 0 0 30px 0 $shadow-color;
 }
 
-.bg-gradient-primary-vertical {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -20vh;
-    left: -25%;
-    aspect-ratio: 203 / 811;
-    width: clamp(100px, 20vw, 203px);
-    height: auto;
-    background: linear-gradient(180deg, #4691F2 0%, rgba(70, 145, 242, 0) 100%);
-    transform: rotate(-45deg);
-    transform-origin: top left;
-    z-index: -1;
-  }
+.text-black{
+  color: $black;
 }
+
 
 
 @import './header';
@@ -131,5 +111,7 @@ $container-max-widths: map-merge($map1: $container-max-widths, $map2: $custom-co
 @import './booking-cta';
 @import './stats';
 @import './testimonials';
+@import './guest-section';
+@import './destinations';
 
 

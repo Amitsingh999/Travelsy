@@ -10,11 +10,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Space+Grotesk:wght@300..700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Lexend:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Space+Grotesk:wght@300..700&display=swap"
         rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="./css/style.min.css">
@@ -119,7 +122,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6 col-12 banner-left text-center text-xl-start">
-                        <p class="sub-heading heading-color fs-4 fw-regular">Relax & Enjoy the Vacation</p>
+                        <p class="sub-heading heading-color fs-4 fw-semibold">Relax & Enjoy the Vacation</p>
                         <h1 class="fw-bold mb-4">Choose <span class="text-primary">Travelsy</span> To Book Your Hotel
                         </h1>
                         <p class="fw-semibold mb-lg-8 mb-6">Lorem ipsum dolor sit amet consectetur. Hac consequat hac
@@ -145,34 +148,589 @@
             </div>
         </section>
 
-
-        <section class="venue-booking-form">
+        <section class="venue-booking-form line-vector">
             <div class="container">
                 <div class="p-6 rounded-5 shadow-sm">
-                    <form class="d-flex justify-content-center flex-wrap flex-lg-nowrap gap-5">
-                        <select class="form-select form-field rounded-pill border-primary-30 booking-form">
-                            <option selected disabled>Type of Venue*</option>
-                            <option>Banquet Hall</option>
-                            <option>Outdoor Garden</option>
-                            <option>Conference Center</option>
-                        </select>
+                    <form class="d-flex justify-content-center flex-wrap flex-lg-nowrap gap-5" action="#" method="GET">
 
-                        <input id="customDate"
-                            class="form-control form-field rounded-pill border-primary-30 booking-form"
-                            placeholder="Pick A Date*">
+                        <div>
+                            <label for="venueType" class="visually-hidden">Venue of Type</label>
+                            <select id="venueType" name="venueType" required
+                                class="form-select form-field rounded-pill border-primary-30 booking-form">
+                                <option selected disabled>Type of Venue*</option>
+                                <option>Banquet Hall</option>
+                                <option>Outdoor Garden</option>
+                                <option>Conference Center</option>
+                            </select>
+                        </div>
 
-                        <input type="text" class="form-control form-field rounded-pill border-primary-30 booking-form"
-                            placeholder="ZIP Code*">
+                        <div>
+                            <label for="customDate" class="visually-hidden">Pick a Date</label>
+                            <input id="customDate" name="date" type="text" required
+                                class="form-control form-field rounded-pill border-primary-30 booking-form"
+                                placeholder="Pick A Date*">
+                        </div>
 
-                        <a href="#" class="btn btn-primary extrabold text-white rounded-pill search-btn">Search
-                            <span class=""><i class="bi bi-arrow-right"></i></span></a>
+                        <div>
+                            <label for="zipcode" class="visually-hidden">ZIP Code</label>
+                            <input id="zipcode" name="zipcode" type="text" required
+                                class="form-control form-field rounded-pill border-primary-30 booking-form"
+                                placeholder="ZIP Code*">
+                        </div>
+
+                        <div>
+                            <button type="submit" class="btn btn-primary extrabold text-white rounded-pill search-btn"
+                                aria-label="Search available venues">
+                                Search
+                                <span><i class="bi bi-arrow-right ps-1"></i></span>
+                            </button>
+                        </div>
+
                     </form>
                 </div>
             </div>
         </section>
 
-    </main>
+        <section class="about plane-vector position-relative overflow-x-hidden py-50 py-lg-100">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div
+                        class="col-lg-6 order-2 mt-lg-0 mt-6 order-lg-1 d-flex gap-3 justify-content-center align-items-center flex-wrap flex-sm-nowrap">
 
+                        <div class="main-image rounded-circle overflow-hidden">
+                            <img src="./images/about-image-1.svg" alt="Person enjoying vacation"
+                                class="w-100 h-100 object-fit-cover" loading="lazy" />
+                        </div>
+                        <div class="d-flex flex-sm-column gap-3">
+                            <div class="small-image overflow-hidden">
+                                <img src="./images/about-section-2.webp" alt="Scenic view of travel destination"
+                                    class="img-fluid w-100 h-100 object-fit-cover" loading="lazy" />
+                            </div>
+                            <div class="small-image rounded-circle overflow-hidden">
+                                <img src="./images/about-section-3.webp" alt="Tour group photo"
+                                    class="img-fluid w-100 h-100 object-fit-cover" loading="lazy" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 order-1 order-lg-2 text-lg-start text-center">
+                        <p class="text-primary sub-heading fw-semibold mb-2">Get About Us</p>
+                        <h2 class="fw-bold mb-3">More About Travelsy</h2>
+                        <p class="fw-semibold">Amet cursus sit amet dictum. At erat pellentesque adipiscing commodo.
+                            Sit amet volutpat consequat mauris nunc congue nisi vitae suscipit. In arcu cursus
+                            euismod quis viverra nibh cras pulvinar. Vulputate eu sceler felis imperdiet proin
+                            fermentum. Arcu vitae elementum curabitur vitae nunc sed velit.
+                        </p>
+                        <p class="fw-semibold">
+                            Rutrum quisque non tellus orci ac. Varius vel pharetra vel turpis nunc eget lorem dolor
+                            sed. Interdum posuere lorem ipsum dolor sit. Egestas maecenas pharetra convallis posuere
+                            morbi.
+                        </p>
+                        <ul class="list-unstyled custom-list p-0 m-0">
+                            <li class="mb-2 position-relative ps-5 fw-semibold text-black">Donec adipiscing tristique
+                                risus nec
+                                feugiat in</li>
+                            <li class="mb-2 position-relative ps-5 fw-semibold text-black">Donec adipiscing tristique
+                                risus nec
+                                feugiat in</li>
+                            <li class="mb-2 position-relative ps-5 fw-semibold text-black">Donec adipiscing tristique
+                                risus nec
+                                feugiat in</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary text-white extrabold rounded-pill px-4 py-2 mt-3">
+                            Read More <span><i class="bi bi-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="destinations my-lg-100 my-50">
+            <div class="container">
+                <div class="row">
+                    <p class="text-center text-primary sub-heading fw-semibold">Top Destinations</p>
+                    <h2 class="text-center fw-bold mb-lg-50 mb-8">Popular Hotels For Booking</h2>
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper pb-100">
+
+                            <!-- Slider 1 -->
+                            <div class="swiper-slide">
+                                <div class="card shadow-sm border p-2 rounded-4">
+                                    <img src="./images/destination-image-one.webp" class="img-fluid"
+                                        alt="Deluxe Room in Paris, Near Museums" loading="lazy">
+
+                                    <div class="card-body">
+                                        <h5 class="card-title text-secondary fw-medium">Some Amazing Title Here</h5>
+                                        <p class="card-text text-muted mb-3">
+                                            Lorem ipsum dolor sit amet, alina adipisci elite. Egestas elementum enim
+                                            netus amet turpis lectus.
+                                        </p>
+
+                                        <div class="d-flex align-items-center text-muted gap-3 mb-3">
+                                            <div class="d-flex align-items-center gap-1">
+                                                <i class="bi bi-geo-alt-fill text-primary"></i>
+                                                <small class="fw-semibold heading-color">Museums</small>
+                                            </div>
+                                            <div class="d-flex align-items-center fw-semibold gap-1">
+                                                <i class="bi bi-person-fill text-primary"></i>
+                                                <small class="fw-semibold heading-color">12 Person Capacity</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="fw-medium text-black fs-3 mb-0">$150<span
+                                                    class="fs-6 fw-semibold">/Per Night</span></div>
+                                            <a href="#"
+                                                class="btn btn-primary rounded-circle text-white d-flex align-items-center justify-content-center">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slider 2 -->
+                            <div class="swiper-slide">
+                                <div class="card shadow-sm border p-2 rounded-4">
+                                    <img src="./images/destination-image-two.webp" class="img-fluid"
+                                        alt="Spacious modern suite with city skyline view" loading="lazy">
+
+                                    <div class="card-body">
+                                        <h5 class="card-title text-secondary fw-medium">Some Amazing Title Here</h5>
+                                        <p class="card-text text-muted mb-3">
+                                            Lorem ipsum dolor sit amet, alina adipisci elite. Egestas elementum enim
+                                            netus amet turpis lectus.
+                                        </p>
+
+                                        <div class="d-flex align-items-center text-muted gap-3 mb-3">
+                                            <div class="d-flex align-items-center gap-1">
+                                                <i class="bi bi-geo-alt-fill text-primary"></i>
+                                                <small class="fw-semibold heading-color">Museums</small>
+                                            </div>
+                                            <div class="d-flex align-items-center fw-semibold gap-1">
+                                                <i class="bi bi-person-fill text-primary"></i>
+                                                <small class="fw-semibold heading-color">18 Person Capacity</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="fw-medium text-black fs-3 mb-0">$250<span
+                                                    class="fs-6 fw-semibold">/Per Night</span></div>
+                                            <a href="#"
+                                                class="btn btn-primary rounded-circle text-white d-flex align-items-center justify-content-center">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slider 3 -->
+                            <div class="swiper-slide">
+                                <div class="card shadow-sm border p-2 rounded-4">
+                                    <img src="./images/destination-image-three.webp" class="img-fluid"
+                                        alt="Elegant hotel room with king-size bed and balcony" loading="lazy">
+
+                                    <div class="card-body">
+                                        <h5 class="card-title text-secondary fw-medium">Some Amazing Title Here</h5>
+                                        <p class="card-text text-muted mb-3">
+                                            Lorem ipsum dolor sit amet, alina adipisci elite. Egestas elementum enim
+                                            netus amet turpis lectus.
+                                        </p>
+
+                                        <div class="d-flex align-items-center text-muted gap-3 mb-3">
+                                            <div class="d-flex align-items-center gap-1">
+                                                <i class="bi bi-geo-alt-fill text-primary"></i>
+                                                <small class="fw-semibold heading-color">Museums</small>
+                                            </div>
+                                            <div class="d-flex align-items-center fw-semibold gap-1">
+                                                <i class="bi bi-person-fill text-primary"></i>
+                                                <small class="fw-semibold heading-color">24 Person Capacity</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="fw-medium text-black fs-3 mb-0">$280<span
+                                                    class="fs-6 fw-semibold">/Per Night</span></div>
+                                            <a href="#"
+                                                class="btn btn-primary rounded-circle text-white d-flex align-items-center justify-content-center">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slider 4 -->
+                            <div class="swiper-slide">
+                                <div class="card shadow-sm border p-2 rounded-4">
+                                    <img src="./images/destination-image-one.webp" class="img-fluid"
+                                        alt="Cozy room with natural lighting and modern design" loading="lazy">
+
+                                    <div class="card-body">
+                                        <h5 class="card-title text-secondary fw-medium">Some Amazing Title Here</h5>
+                                        <p class="card-text text-muted mb-3">
+                                            Lorem ipsum dolor sit amet, alina adipisci elite. Egestas elementum enim
+                                            netus amet turpis lectus.
+                                        </p>
+
+                                        <div class="d-flex align-items-center text-muted gap-3 mb-3">
+                                            <div class="d-flex align-items-center gap-1">
+                                                <i class="bi bi-geo-alt-fill text-primary"></i>
+                                                <small class="fw-semibold heading-color">Museums</small>
+                                            </div>
+                                            <div class="d-flex align-items-center fw-semibold gap-1">
+                                                <i class="bi bi-person-fill text-primary"></i>
+                                                <small class="fw-semibold heading-color">28 Person Capacity</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="fw-medium text-black fs-3 mb-0">$300<span
+                                                    class="fs-6 fw-semibold">/Per Night</span></div>
+                                            <a href="#"
+                                                class="btn btn-primary rounded-circle text-white d-flex align-items-center justify-content-center">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slider 5 -->
+                            <div class="swiper-slide">
+                                <div class="card shadow-sm border p-2 rounded-4">
+                                    <img src="./images/destination-image-two.webp" class="img-fluid"
+                                        alt="Comfortable twin-bed hotel room in urban setting" loading="lazy">
+
+                                    <div class="card-body">
+                                        <h5 class="card-title text-secondary fw-medium">Some Amazing Title Here</h5>
+                                        <p class="card-text text-muted mb-3">
+                                            Lorem ipsum dolor sit amet, alina adipisci elite. Egestas elementum enim
+                                            netus amet turpis lectus.
+                                        </p>
+
+                                        <div class="d-flex align-items-center text-muted gap-3 mb-3">
+                                            <div class="d-flex align-items-center gap-1">
+                                                <i class="bi bi-geo-alt-fill text-primary"></i>
+                                                <small class="fw-semibold heading-color">Museums</small>
+                                            </div>
+                                            <div class="d-flex align-items-center fw-semibold gap-1">
+                                                <i class="bi bi-person-fill text-primary"></i>
+                                                <small class="fw-semibold heading-color">32 Person Capacity</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="fw-medium text-black fs-3 mb-0">$150<span
+                                                    class="fs-6 fw-semibold">/Per Night</span></div>
+                                            <a href="#"
+                                                class="btn btn-primary rounded-circle text-white d-flex align-items-center justify-content-center">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slider 6 -->
+                            <div class="swiper-slide">
+                                <div class="card shadow-sm border p-2 rounded-4">
+                                    <img src="./images/destination-image-three.webp" class="img-fluid"
+                                        alt="Deluxe hotel interior with contemporary decor" loading="lazy">
+
+                                    <div class="card-body">
+                                        <h5 class="card-title text-secondary fw-medium">Some Amazing Title Here</h5>
+                                        <p class="card-text text-muted mb-3">
+                                            Lorem ipsum dolor sit amet, alina adipisci elite. Egestas elementum enim
+                                            netus amet turpis lectus.
+                                        </p>
+
+                                        <div class="d-flex align-items-center text-muted gap-3 mb-3">
+                                            <div class="d-flex align-items-center gap-1">
+                                                <i class="bi bi-geo-alt-fill text-primary"></i>
+                                                <small class="fw-semibold heading-color">Museums</small>
+                                            </div>
+                                            <div class="d-flex align-items-center fw-semibold gap-1">
+                                                <i class="bi bi-person-fill text-primary"></i>
+                                                <small class="fw-semibold heading-color">40 Person Capacity</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="fw-medium text-black fs-3 mb-0">$150<span
+                                                    class="fs-6 fw-semibold">/Per Night</span></div>
+                                            <a href="#"
+                                                class="btn btn-primary rounded-circle text-white d-flex align-items-center justify-content-center">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-nav-wraper-2 rounded-pill shadow">
+                            <div class="swiper-button-next">
+                                <i class="bi bi-arrow-right text-primary fs-4"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                <i class="bi bi-arrow-left text-primary fs-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="stats py-50 pb-lg-100 pb-50">
+            <div class="container">
+                <div class="row g-4">
+
+                    <!-- Stat 1 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card text-center shadow border-0 rounded-4 h-100" aria-label="1000+ Hotels">
+                            <div class="card-body">
+                                <div class="mb-4 mt-6 d-inline-flex align-items-center justify-content-center bg-primary stats-image rounded-circle shadow-sm p-3"
+                                    aria-hidden="true">
+                                    <img src="./images/stats-1.svg" class="img-fluid" alt="Hotel building icon"
+                                        loading="lazy">
+                                </div>
+                                <h3 class="fw-bold fw-bold fs-2 mt-2">1000+</h3>
+                                <p class="text-muted fw-semibold mb-0">Hotels</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card text-center shadow border-0 rounded-4 h-100"
+                            aria-label="4500+ Rooms Available">
+                            <div class="card-body">
+                                <div class="mb-4 mt-6 d-inline-flex align-items-center justify-content-center bg-primary stats-image rounded-circle shadow-sm p-3"
+                                    aria-hidden="true">
+                                    <img src="./images/stats-2.svg" class="img-fluid" alt="Bed icon representing rooms"
+                                        loading="lazy">
+                                </div>
+                                <h3 class="fw-bold text-black fs-2 mt-2">4500+</h3>
+                                <p class="text-muted fw-semibold mb-0">Rooms Available</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card text-center shadow border-0 rounded-4 h-100" aria-label="30+ Beach Views">
+                            <div class="card-body">
+                                <div class="mb-4 mt-6 d-inline-flex align-items-center justify-content-center bg-primary stats-image rounded-circle shadow-sm p-3"
+                                    aria-hidden="true">
+                                    <img src="./images/stats-3.svg" class="img-fluid"
+                                        alt="Palm tree icon representing beaches" loading="lazy">
+                                </div>
+                                <h3 class="fw-bold text-black fs-2 mt-2">30+</h3>
+                                <p class="text-muted fw-semibold mb-0">Beach Views</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stat 4 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card text-center shadow border-0 rounded-4 h-100" aria-label="8000+ Guests">
+                            <div class="card-body">
+                                <div class="mb-4 mt-6 d-inline-flex align-items-center justify-content-center bg-primary stats-image rounded-circle shadow-sm p-3"
+                                    aria-hidden="true">
+                                    <img src="./images/stats-4.svg" class="img-fluid"
+                                        alt="User icon representing guests" loading="lazy">
+                                </div>
+                                <h3 class="fw-bold fs-2 mt-2 text-black">8000+</h3>
+                                <p class="text-muted fw-semibold mb-0">Guests</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="guest-section pt-lg-100 pt-50 bg-gradient-soft-blue">
+            <div class="container">
+                <div class="row">
+                    <p class="text-primary text-center fw-regular fs-4 sub-heading">Best Places For Your Party</p>
+                    <h2 class="fw-bold text-center text-black mb-lg-50 mb-8">Place That Accommodates Your Guest</h2>
+
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper pb-100">
+                            <div class="swiper-slide">
+                                <div class="card-wrapper">
+                                    <img src="./images/guest-wedding.webp" class="img-fluid"
+                                        alt="Beautiful wedding venue with floral decorations and elegant setup">
+                                    <h3 class="p-6 text-white">Wedding</h3>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card-wrapper">
+                                    <img src="./images/guest-birthday.webp" class="img-fluid"
+                                        alt="Colorful birthday party setup with balloons and decorations">
+                                    <h3 class="p-6 text-white">Birthday</h3>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card-wrapper">
+                                    <img src="./images/guest-corporate.webp" class="img-fluid"
+                                        alt="Modern corporate event venue with conference setup">
+                                    <h3 class="p-6 text-white">Corporate</h3>
+                                </div>
+                            </div>
+
+
+                            <div class="swiper-slide">
+                                <div class="card-wrapper">
+                                    <img src="./images/guest-wedding.webp"
+                                        alt="Professional business meeting space with presentation screen">
+                                    <h3 class="p-6 text-white">Baby Shower</h3>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card-wrapper">
+                                    <img src="./images/guest-corporate.webp" class="img-fluid"
+                                        alt="Spacious event hall for corporate functions and seminars">
+                                    <h3 class="p-6 text-white">Corporate</h3>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card-wrapper">
+                                    <img src="./images/guest-birthday.webp" class="img-fluid"
+                                        alt="Decorated baby shower venue with pastel colors and gifts">
+                                    <h3 class="p-6 text-white">Corporate</h3>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="swiper-nav-wrapper rounded-pill shadow">
+                            <div class="swiper-button-next custom-nav">
+                                <i class="bi bi-arrow-right fs-4"></i>
+                            </div>
+                            <div class="swiper-button-prev custom-nav">
+                                <i class="bi bi-arrow-left fs-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="testimonials py-50">
+            <div class="container">
+                <p class="text-primary text-center fw-semibold fs-4 sub-heading">Testimonials</p>
+                <h2 class="fw-bold text-center text-black mb-lg-50 mb-8">What Our Traveler Say’s</h2>
+                <div class="row">
+                    <div
+                        class="col-xl-7 d-flex mb-8 mb-xl-0 flex-md-row flex-column gap-3 align-items-md-end justify-content-center">
+                        <img src="./images/testimonials-1.webp" alt="Smiling traveler enjoying scenic destination"
+                            class="img-fluid rounded-4 shadow" />
+                        <img src="./images/testimonials-2.webp" alt="Happy traveler posing during a city tour"
+                            class="img-fluid rounded-4 shadow" />
+                        <img src="./images/testimonials-3.webp" alt="Traveler relaxing at a beach resort"
+                            class="img-fluid rounded-4 shadow" />
+                    </div>
+                    <div class="col-xl-5 ps-xl-8 ps-0 pt-40">
+                        <h5 class="fw-medium mb-1 text-center text-xl-start">Tommy Murphy</h5>
+                        <p class="text-muted mb-6 text-xl-start text-center">Global Directives Architect</p>
+                        <blockquote>
+                            <p class="text-center text-xl-start mb-xl-0 mb-6">
+                                Donec adipiscing tristique risus nec feugiat in. Ullamcorper morbi tincidunt ornare
+                                massa eget egestas purus viverra. Pharetra sit amet aliquam id diam maecenas ultricies
+                                mi eget. Aenean euismod elementum nisi quis eleifend. Sit amet facilisis magna etiam
+                                tempor orci. Vitae et leo duis ut. Arcu cursus vitae congue mauris. </p>
+                        </blockquote>
+
+
+                        <button class="btn btn-primary rounded-circle testimonial-btn" aria-label="Next testimonial">
+                            <span><i class="bi bi-arrow-right text-white"></i></span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="booking-cta">
+            <div class="container text-center">
+                <h2 class="m-2 fw-bold text-white">Are You Ready To Travel? Remember Us !!</h2>
+                <p class="mb-8 fw-semibold text-white">Amet nisl purus in mollis nunc. Blandit libero volutpat sed cras
+                    ornare. In pellentesque massa
+                    placerat duis ultricies lacus sed. Nisl suscipit adipiscing bibendum est ultricies integer quis
+                    auctor. Id consectetur purus ut faucibus pulvinar elementum integer enim.</p>
+                <a href="#" class="btn btn-light text-primary extrabold rounded-pill px-4 py-2 mt-3">
+                    Book Now<span><i class="bi bi-arrow-right fs-6 ps-1 text-primary"></i></span>
+                </a>
+            </div>
+        </section>
+
+
+        <section class="blogs">
+            <div class="container my-lg-100 my-50">
+                <p class="text-center text-primary sub-heading fw-semibold">Latest News</p>
+                <h2 class="text-center mb-lg-50 mb-8">Read Latest Blogs</h2>
+                <div class="row g-4">
+
+                    <article class="col-lg-4 col-md-6 col-12">
+                        <div class="card">
+                            <img src="./images/blogs-1.webp" class="card-img-top" alt="Friends enjoying a mountain trek"
+                                loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title fs-5 heading-color">Top Trekking Tips from Seasoned Travelers</h5>
+                                <p class="card-text">Discover expert tips for making the most of your next mountain
+                                    adventure with friends and nature lovers.</p>
+                                <a href="#" class="btn text-primary fs-6 extrabold"
+                                    aria-label="Read more about Top Trekking Tips">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-lg-4 col-md-6 col-12">
+                        <div class="card">
+                            <img src="./images/blogs-2.webp" class="card-img-top"
+                                alt="Travelers sharing stories around a campfire" loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title fs-5 heading-color">Building Connections Through Travel</h5>
+                                <p class="card-text">Explore how solo trips and group adventures can turn strangers into
+                                    lifelong friends and unforgettable memories.</p>
+                                <a href="#" class="btn text-primary fs-6 extrabold"
+                                    aria-label="Read more about Building Connections Through Travel">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="col-lg-4 col-md-6 col-12 mx-md-auto">
+                        <div class="card">
+                            <img src="./images/blogs-3.webp" class="card-img-top"
+                                alt="Group selfie at a scenic viewpoint" loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title fs-5 heading-color">Capturing Moments: Travel Photography Tips
+                                </h5>
+                                <p class="card-text">Master the art of capturing the essence of your travel journey with
+                                    our expert photography advice.</p>
+                                <a href="#" class="btn text-primary fs-6 extrabold"
+                                    aria-label="Read more about Travel Photography Tips">Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
         <div class="footer-top">
@@ -339,12 +897,61 @@
 
     </footer>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script type="module" src="./js/script.js"></script>
+
+    <script>
+        var swiper1 = new Swiper(".mySwiper", {
+            slidesPerView: 3.5,
+            spaceBetween: 0,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.5,
+                },
+                576: {
+                    slidesPerView: 1.5,
+                },
+                768: {
+                    slidesPerView: 2.5,
+                },
+                992: {
+                    slidesPerView: 3.5,
+                },
+            },
+        });
+    </script>
+
+    <script>
+        var swiper2 = new Swiper(".mySwiper2", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    </script>
 
 </body>
 

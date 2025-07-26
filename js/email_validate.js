@@ -22,5 +22,6 @@ function setupEmailValidation() {
   });
 }
 
-// call the function directly
+
 setupEmailValidation();
+

@@ -1,0 +1,32 @@
+.guest-section .card-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.guest-section .card-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.guest-section .card-wrapper h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.guest-section .swiper-nav-wrapper {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);                       
+  gap: 10px;
+  padding: 24px 53px;
+  z-index: 10;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}

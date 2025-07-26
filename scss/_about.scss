@@ -1,0 +1,82 @@
+.main-image {
+  width: 450px;
+  height: 600px;
+  border-radius: 50%;
+}
+
+.small-image {
+  width: 160px;
+  height: 207px;
+
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+
+
+.custom-list li::before {
+  content: "➤";
+  position: absolute;
+  left: 0;
+  color: $primary
+}
+
+@media(max-width: 991.98px) {
+  .custom-list li::before {
+    content: "➤";
+    position: absolute;
+    left: 162px;
+    top: -4%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .custom-list li::before {
+    content: "➤";
+    position: absolute;
+    left: 76px;
+    top: -4%;
+  }
+}
+
+@media (max-width: 574.98px) {
+  .custom-list li::before {
+    position: relative;
+    left: 0;
+    top: 0;
+    padding-right: 10px;
+  }
+
+}
+
+.plane-vector::after {
+  content: "";
+  position: absolute;
+  top: 150px;
+  right: 2px;
+  width: 396px;
+  aspect-ratio: 1 / 1;
+  background-image: url('../images/social-media-logo/about-plane-vector.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+  opacity: .7;
+  transform: rotate(-15deg);
+  transform-origin: top right;
+}
+
+@media(max-width: 991.98px) {
+  .plane-vector::after {
+    top: 65px;
+    height: 350px;
+  }
+}
+
+@media(max-width: 767.98px) {
+  .plane-vector::after {
+    display: none;
+  }
+}

@@ -1,0 +1,21 @@
+.ps-70 {
+    padding-left: 70px;
+}
+
+.testimonials h5 {
+    color: #202020;
+}
+
+
+.testimonial-btn {
+    margin-top: 145px;
+}
+
+@media(max-width: 1199.98px) {
+    .testimonial-btn {
+        // margin-top: 100px;
+        margin: auto;
+        display: flex;
+
+    }
+}
