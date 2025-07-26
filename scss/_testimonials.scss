@@ -18,3 +18,19 @@
 
     }
 }
+
+
+@media(max-width: 575.98px) {
+    .testimonials .row > div:first-child {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .testimonials img {
+        width: 100%;
+        max-width: 250px;
+        height: 200px;
+        object-fit: cover;
+        
+    }
+}
